@@ -1,0 +1,119 @@
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+
+// Include theme-specific fonts
+@import url(https://fontlibrary.org/face/selawik);
+
+// Override theme settings (see ../template/settings.scss)
+$backgroundColor: #fff;
+
+$mainColor: black;
+$headingColor: #0772b0;
+
+$mainFontSize: 32px;
+$mainFont: 'SelawikLight', Arial, Helvetica, sans-serif;
+$headingFont: 'SelawikRegular', Arial, Helvetica, sans-serif;
+$headingTextShadow: none;
+$headingLetterSpacing: normal;
+$headingTextTransform: uppercase;
+$headingFontWeight: 600;
+$linkColor: #ab153c;
+$linkColorHover: lighten( $linkColor, 15% );
+$selectionBackgroundColor: lighten( $linkColor, 25% );
+
+$heading1Size: 2.5em;
+$heading2Size: 1.6em;
+$heading3Size: 1.3em;
+$heading4Size: 1.0em;
+
+section.has-dark-background {
+	&, h1, h2, h3, h4, h5, h6 {
+		color: #fff;
+	}
+}
+
+#header {
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+
+}
+
+#header .tag-line {
+	background-color: black;
+	padding: 40px 0 50px 50px;
+	color: white;
+	text-transform: uppercase;
+	font-size: 24px;
+}
+
+#header hr {
+	height: 5px;
+	color: white;
+	background-color: white;
+	padding: 0;
+	margin: 0;
+}
+
+#header .gradient {
+	background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0) 80%);
+	height: 60px;
+}
+
+div.footer {
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	background-image: linear-gradient(to right, rgba(7, 114, 176, 1), rgba(0, 0, 0, 0) 80%);
+	height: 60px;
+	text-transform: uppercase;
+	font-size: 28px;
+	padding: 20px 0 0 10px;
+	color: white;
+	width: 98%;
+	font-family: $mainFont
+}
+
+.bluetext {
+	color: $headingColor;
+}
+
+div.footer .logo {
+	position: absolute;
+	right: 0;
+	margin-top: -10px;
+}
+
+div.reveal {
+	border-top: 10px solid black;
+}
+
+.reveal section img.logo {
+	height: 32px;
+	border: 0;
+	box-shadow: none;
+	margin: 0;
+	display: inline;
+}
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+.reveal .slide-number {
+	left: 8px;
+	bottom: 24px;
+	font-size: 18px;
+	font-family: $mainFont;
+	display: inline;
+	background-color: rgba(0,0,0,0)
+}
+
+.reveal aside.controls {
+	bottom: 60px;
+}
