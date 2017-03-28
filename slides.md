@@ -12,6 +12,7 @@ jghiloni@ecsteam.com
 
 ## About ECS Team
 
+* Technology consulting company with headquarters in Denver, CO
 * Founded in 1999
 * Completed 40+ cloud native development engagements since 2014
 * Bronze Sponsor, CF Summit
