@@ -25,20 +25,6 @@ jghiloni@ecsteam.com
 
 ## What's New In Java 8?
 
-### (Completeable) Futures
-
-```
-public void doSomethingAsynchronously() {
-	CompleteableFuture.supplyAsync(this::someReceiverMethod)
-		.thenCompose(this::someOtherAsyncMethod)
-		.thenApply(this::someBlockingMethod);
-}
-```
-
---
-
-## What's New In Java 8?
-
 ### Functional Interfaces
 
 ```
@@ -72,20 +58,14 @@ public <T> Stream<T> of(T... items) {
 ### Lambdas
 
 ```
-public <T> List<String> of(T... items) {
-	Arrays.stream(items).map(t -> t.toString()).collect(Collectors.toList());
+public List<Integer> squaredIntegers(Integer... ints) {
+	return Arrays.stream(ints).map((i) -> i * i).collect(Collectors.toList());
 }
 ```
 
---
-
-## What's New In Java 8?
-
-### Lambdas
-
 ```
-public <T> List<String> of(T... items) {
-	Arrays.stream(items).map(Object::toString).collect(Collectors.toList());
+public List<Integer> positiveIntegers(Integer... ints) {
+	return Arrays.stream(ints).filter((i) -> i > 0).collect(Collectors.toList());
 }
 ```
 
@@ -99,12 +79,66 @@ public <T> List<String> of(T... items) {
 
 * Non-blocking API
 * Compatible with Standard Java Features
-	* `Stream`
-	* `CompleteableFuture`
 * Typed sequences
 	* `Publisher` - Reactive Standard (used for 0 .. *N* items)
 		* `Mono` - Used for 0 .. 1 items
 		* `Flux` - Used for *N* items
+
+---
+
+## Interacting with the Cloud Foundry API
+
+Two global components:
+* `ConnectionContext` - Info about foundation
+* `TokenProvider` - Authentication information
+
+--
+
+## Interacting with the Cloud Foundry API
+
+Client interface:
+* `ConnectionContext` - Info about foundation
+* `TokenProvider` - Authentication information
+* `UaaClient` - Work with the Cloud Foundry UAA
+
+--
+
+## Interacting with the Cloud Foundry API
+
+### Demo!
+
+--
+
+## Interacting with the Cloud Foundry API
+
+Client interface:
+* `ConnectionContext` - Info about foundation
+* `TokenProvider` - Authentication information
+* `UaaClient` - Work with the Cloud Foundry UAA
+* `CloudFoundryClient` - Work with the Cloud Foundry REST API
+
+--
+
+## Interacting with the Cloud Foundry API
+
+### Demo!
+
+--
+
+## Interacting with the Cloud Foundry API
+
+Client interface:
+* `ConnectionContext` - Info about foundation
+* `TokenProvider` - Authentication information
+* `UaaClient` - Work with the Cloud Foundry UAA
+* `CloudFoundryClient` - Work with the Cloud Foundry REST API
+* `DopplerClient` - Work with the Cloud Foundry Firehose
+
+--
+
+## Interacting with the Cloud Foundry API
+
+### Demo!
 
 ---
 
