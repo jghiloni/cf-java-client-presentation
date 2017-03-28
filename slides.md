@@ -10,6 +10,16 @@ jghiloni@ecsteam.com
 
 ---
 
+## About ECS Team
+
+* Founded in 1999
+* Completed 40+ cloud native development engagements since 2014
+* Bronze Sponsor, CF Summit
+* Silver Member, CF Foundation
+* Sponsor, Colorado CF Meetup
+
+---
+
 ## Agenda
 1. What's new in Java 8?
 1. Introduction to Project Reactor
